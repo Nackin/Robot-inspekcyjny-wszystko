@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html style="font-family: Segoe UI;">
+<head>
+    <title>Robot - MainPage</title>
+    <script type="text/javascript" src="timer.js"></script>
+</head>
+<body>
+    <style>
+        h1{
+            color: snow
+        }
+        #nazwa{
+            background-color: #303030;
+        }
+        #clock{
+            background-color: grey;
+            color: snow;
+        }
+        #rightmid{
+            vertical-align: top;
+        }
+        #centermid{
+            vertical-align: top;
+            align-content: center;
+        }
+        #mid{
+            background-color: lightgray;
+        }
+        #tabdan{
+            background-color: whitesmoke;
+        }
+        
+    </style>
+        
+    <body onload="timer();" bgcolor="whitesmoke">
+    
+    <table width="1400" align="center">
+        <tr>
+            <td id="nazwa" colspan="2" align="center">
+                <h1>Centrum Sterowania robotem inspekcyjnym</h1>
+            </td>
+            <td id="clock" align="center">
+                <div id="timer"></div> 
+            </td>     
+        </tr>
+        <tr id="mid" height="550">
+            
+            <td id="centermid"width="1000" colspan="2">
+                <h3>Transmisja wideo:</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/y881t8ilMyc" frameborder="0" allowfullscreen></iframe>
+                </iframe>
+
+            </td>
+            <td id=rightmid width="250">
+                <a id="button"  href="http://localhost:3000/db"><input type="submit" value="       Wszysztkie zapisane odczyty:       "></a>
+                <h2>Ostatni odczyt:</h2>
+                <table id="tabdan" bgcolor="whitesmoke">
+                    <tr bgcolor="whitesmoke">
+                        <td>
+                                abdsad
+                        </td>
+                        <td>
+                            bdsad
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <td align="center"width="250">
+            <img src="logo_prz2.png"/>
+        </td>
+        <td id= "sklad">
+            Skład zespołu:</br>
+            Daniel Sowa,  Piotr Suchorabski, Karol Ślęczka, Michał Wierzbiński, Bartosz Wójcik </br>
+        </td>
+        <td align="center"vertical-align="top">
+            <img src="bee.png"/>
+        </td>     
+
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html style="font-family: Segoe UI;">
+<head>
+    <title>Robot- DB </title>
+    
+    <script type="text/javascript" src="timer.js"></script>
+</head>
+<body onload="timer();" bgcolor="whitesmoke">
+    <style>
+        #nazwa{
+            background-color: #303030;
+            color: snow;
+            width: 1150px;
+        }
+        #clock{
+            width: 250px;
+            background-color: grey;
+            color: snow;
+        }
+        #dane{
+            background-color: lightgray;
+            height: 200px;
+        }
+        #danetab{
+            border-radius: 2px;
+            border: 1px black;
+            
+        }
+        thead,tbody { border: 1px solid black; }
+        
+        
+    </style>
+    <table align="center">
+        <a id="button" href="http://localhost:3000/home"><input type="submit" value="   Wróć:   "></a>
+        <tr>
+            <td id="nazwa">
+                
+                <h1 align = "center">
+                    Wszystkie zebrane dane:
+                </h1>
+            </td>
+            
+            <td id="clock" align="center">
+                <div id="timer"></div> 
+                
+            </td>
+        </tr>
+        <tr id="dane">
+            <td colspan="2">
+                <table id="danetab" align="center">
+                    <thead bgcolor = "beige">
+                        <tr align="center">
+                            <th >
+                                Data pomiaru
+                            </th>
+                            <th > 
+                                Odczyt temperatury
+                            </th>
+                            <th >
+                                Odczyt wilgotności
+                            </th >
+                            <th >
+                                Czujnik frontowy
+                            </th>
+                            <th >
+                                Czujnik tylny
+                            </th>
+                            <th > 
+                                Czujnik prawy
+                            </th>
+                            <th >
+                                Czujnik lewy
+                            </th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody bgcolor = "whitesmoke">
+                    <%daneList.forEach(dane => { %>
+                        <tr align="center">
+                            <th scope ><%=dane.date %></th>
+                            
+                            <td>
+                                <%=dane.tmp %>
+                            </td>
+                            <td>
+                                <%=dane.wilg %>
+                            </td>
+                            <td>
+                                <%=dane.od_front %>
+                            </td>
+                            <td>
+                                <%=dane.od_back %>
+                            </td>
+                            <td>
+                                <%=dane.od_right %>
+                            </td>
+                            <td>
+                                <%=dane.od_left %>
+                            </td>
+
+                        </tr>
+                        <%})%>
+                </tbody>
+                </table>
+            </td>
+            
+        </tr>
+        <td align="left"width="250">
+            <img src="logo_prz2.png"/>
+        </td>
+       
+        <td align="center"vertical-align="top">
+            <img src="bee.png"/>
+        </td>   
+    </table>
+    
+    
+</body>
+</html>
